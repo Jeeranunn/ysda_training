@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอร์สเรียนออนไลน์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-screen">
+    <div class="login-box">
+        <span class="open-enrollment-badge">ยินดีต้อนรับ!</span>
+        <h2>เข้าสู่ระบบการเรียน</h2>
+        <p>กรุณากรอกรหัสสมาชิกและรหัสผ่านเข้าเรียน</p>
+        <input type="text" id="login-code" placeholder="รหัสสมาชิก">
+        <input type="password" id="login-pass" placeholder="รหัสผ่าน">
+        <button id="login-btn" onclick="handleLogin()">เข้าสู่ระบบ</button>
+        <p id="login-error" style="color: var(--danger); font-size: 0.85em; margin-top: 15px; display: none;"></p>
+    </div>
+</div>
+
+<div id="dashboard-screen">
+    <div class="dashboard-container">
+        <button class="top-logout-btn" onclick="handleLogout()">🚪 ออกจากระบบ</button>
+        <h1 style="color: white; text-align: center; font-size: 2em; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">🎓 คลังคอร์สเรียนของฉัน</h1>
+        <p style="color: rgba(255,255,255,0.8); text-align: center; margin: 0 0 30px 0;">กรุณาเลือกคอร์สเรียนที่คุณต้องการเข้าศึกษาข้อมูล</p>
+        <div class="dashboard-grid" id="course-grid"></div>
+    </div>
+</div>
+
+<div id="warning-modal">
+    <div class="modal-content">
+        <h1 style="color:var(--danger); margin-top: 0; font-size: 1.5em;">คำเตือนและข้อตกลงสำคัญ</h1>
+        <div class="policy-box">
+            องค์กรต้องการเห็นกระบวนการเรียนรู้และคิดวิเคราะห์ที่กลั่นออกมาจากความเข้าใจของผู้เรียน มากกว่าคำตอบที่สวยหรูซึ่งออกแบบมาจาก AI  <br><br>
+            <b>เงื่อนไข:</b>
+            <ul>
+                <li>ห้ามใช้ AI ช่วยรับชมคลิป, ทำแบบฝึกหัด หรือทำแผนภาพ</li>
+                <li>ทีมงานจะใช้โปรแกรมตรวจสอบ AI กับงานทุกชิ้น</li>
+            </ul>
+            <b>หากพบการทุจริต จะมีมาตรการดังต่อไปนี้:</b>
+          <ul>
+                <li> <b>ไล่ออกและตัดสิทธิ์สมาชิก (Terminate) ทันที</b></li>
+                <li>ส่งหนังสือแจ้งพฤทีตกรรมไปยังสถานศึกษาต้นสังกัด </li>
+               <li>ประกาศรายชื่อผู้ฝ่าฝืนบนเว็บไซต์</li>
+            </ul>
+        </div>
+        <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; text-align: left; margin-bottom: 25px;">
+            <input type="checkbox" id="accept-policy" style="margin-top: 5px; transform: scale(1.2);">
+            <span style="font-size: 0.9em; font-weight: bold; color: var(--text-navy);">ข้าพเจ้ายอมรับเงื่อนไขทุกประการ หากฝ่าฝืนข้าพเจ้ายินยอมรับบทลงโทษสูงสุดโดยไม่มีข้อโต้แย้ง</span>
+        </label>
+        <button id="confirm-btn" onclick="strictConfirm()" style="background:#a0aec0; color:white; border:none; padding:18px 40px; border-radius:12px; cursor:not-allowed; font-weight:bold; font-size: 1.1em; width: 100%;" disabled>ยืนยันและเข้าสู่บทเรียน</button>
+    </div>
+</div>
+
+<div id="note-modal">
+    <div class="note-modal-box">
+        <h2>📤 ส่งโน๊ตของบทเรียน</h2>
+        <div class="note-field">
+            <label>รหัสสมาชิก (ระบบดึงจากบัญชีที่ล็อกอินให้อัตโนมัติ)</label>
+            <input type="text" id="note-member-code" readonly style="background:#f1f5f9; color:#4a5568; cursor:not-allowed;">
+        </div>
+        <div class="note-field">
+            <label>เลือกโน๊ตของคลิปที่ต้องการส่ง</label>
+            <select id="note-lesson-select"></select>
+        </div>
+        <div class="note-field">
+            <label>ไฟล์โน๊ต (รูปภาพ หรือ PDF)</label>
+            <div class="file-drop" id="note-file-drop" onclick="document.getElementById('note-file-input').click()">
+                <div class="file-drop-text" id="note-file-drop-text">📎 แตะเพื่อเลือกไฟล์ (ไม่เกิน 10MB)</div>
+                <input type="file" id="note-file-input" accept="image/*,.pdf" style="display:none;" onchange="handleNoteFileSelect(this)">
+            </div>
+        </div>
+        <div class="note-modal-actions">
+            <button class="note-btn-cancel" onclick="closeNoteModal()">ยกเลิก</button>
+            <button class="note-btn-submit" id="note-submit-btn" onclick="submitNoteFile()">ส่งโน๊ต</button>
+        </div>
+        <div class="note-status" id="note-status"></div>
+    </div>
+</div>
+
+<div class="app-container" id="main-app">
+    <div class="sidebar collapsed" id="sidebar">
+        <div class="sidebar-header">
+            <span id="sidebar-title" onclick="backToMainMenu()">🏠 เมนูหลัก</span>
+            <button id="close-sidebar-mobile" onclick="toggleSidebar()">✕ ปิดเมนู</button>
+        </div>
+        <div class="progress-section" id="prog-sec" style="display:none;">
+            <div class="progress-text">
+                <span>ความคืบหน้าคอร์สนี้</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="overall-progress"></div>
+            </div>
+        </div>
+
+        <button class="note-toggle-btn" id="note-btn" onclick="openNoteModal()" style="display:none;">
+            <span>📤 ส่งโน๊ตของบทเรียน</span>
+            <span>➜</span>
+        </button>
+
+        <button class="prep-toggle-btn" id="prep-btn" onclick="togglePrepBox()" style="display:none;">
+            <span>🚀 เตรียมพร้อมก่อนเข้าเรียน!</span>
+            <span id="prep-arrow">▼</span>
+        </button>
+        
+        <div id="prep-box" class="preparation-box">
+            <div class="prep-subheader">📌 ลิงก์ห้องเรียนหลัก</div>
+            <a id="main-classroom-link" href="#" target="_blank" class="join-classroom-btn">
+                <img src="https://www.gstatic.com/images/branding/product/1x/classroom_48dp.png" width="20"> เข้าร่วมชั้นเรียนเพื่อส่งงาน
+            </a>
+        </div>
+
+        <div class="lesson-list-container">
+            <ul class="lesson-list" id="lesson-menu"></ul>
+            
+            <div class="logout-container">
+                <button class="logout-btn" onclick="handleLogout()">🚪 ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <button id="toggle-sidebar" onclick="toggleSidebar()">☰ คลังวิชา</button>
+        <div class="course-card">
+            <h1 id="current-title" style="color: #2c3e50; font-size: 1.3em; margin: 0;">ยินดีต้อนรับ! กรุณาเลือกคอร์สเรียน</h1>
+            
+            <div class="video-container" id="vid-box" style="display:none;"><div id="player"></div></div>
+            <div id="status" class="status-box" style="display:none;">สถานะ: พร้อมเรียน</div>
+
+            <button id="next-btn" onclick="autoNext()">✅ เรียนจบตอนแล้ว! ไปตอนถัดไป →</button>
+            
+            <a id="doc-btn" href="#" target="_blank">📄 ดาวน์โหลดเอกสารประกอบการเรียนคอร์สนี้</a>
+            
+            <a id="assignment-btn" href="#" target="_blank">
+                <img src="https://www.gstatic.com/images/branding/product/1x/classroom_48dp.png" width="24"> 📝 เข้าสู่ชั้นเรียนเพื่อส่งงานหลัก
+            </a>
+
+            <div class="mission-section" id="mission-section"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
