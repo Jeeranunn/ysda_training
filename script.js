@@ -1,5 +1,5 @@
 // 🔗 ลิงก์ Apps Script ล่าสุด
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwuOjeNpwgRbIo7usnVbPQ3FOaZf_IugE2n0YVrQ0F6pUUNMZKH7Gkou7_-ledTnCKBAQ/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxOyOFnIRNeDhCViZBjvbg37T6snmphl9DwUaxnaal1f340Ibm7OHwe2iuShV4gY3Rg6Q/exec";
 
 let availableCourses = []; 
 let player, maxTimeWatched = 0, actualWatchTime = 0, allLessons = [], currentGlobalIdx = -1, pendingLessonIdx = -1;
