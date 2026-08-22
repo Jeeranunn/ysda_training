@@ -1,14 +1,14 @@
 :root {
-    --glam-navy-start: #ff416c;  /* ชมพูสดเกรดพรีเมียมประกายคริสตัล */
-    --glam-navy-end: #ff758c;    /* ส้มคอรัลสว่างสดใส นวลตา */
-    --glam-red: #ffd166;         /* สีทองสว่างประกาย (Sunlit Gold) */
+    --glam-navy-start: #632cd6;  /* ม่วงสดจัดจ้าน สว่าง มีมิติ */
+    --glam-navy-end: #3b82f6;    /* น้ำเงินรอยัลสว่างประกายฟ้า */
+    --glam-red: #f43f5e;         /* ชมพูรูบี้แกลม ใช้เป็นจุดเด่น */
     --glam-white: #ffffff; 
-    --glam-bg-muted: #fff8f8;    /* ขาวอมชมพูคอรัลจางมากๆ ดูสะอาดแพง */
+    --glam-bg-muted: #f6f5ff;    /* ขาวนวลเจือม่วงพาสเทล */
     --text-white: #ffffff;
-    --text-navy: #4a1525;        /* สีตัวหนังสือแดงเข้มอมน้ำตาล อ่านง่าย */
-    --text-muted: #8c5d69;
-    --success: #10b981;
-    --danger: #e63946;
+    --text-navy: #1e153b;        /* ตัวอักษรสีน้ำเงินเข้มลึก */
+    --text-muted: #6b6385;
+    --success: #059669;
+    --danger: #dc2626;
     --sidebar-w: 340px;
 }
 
