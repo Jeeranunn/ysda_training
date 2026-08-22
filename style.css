@@ -1,14 +1,14 @@
 :root {
-    --glam-navy-start: #0a2f24;  /* เขียวป่าลึกหรูหรา (Deep Forest Green) */
-    --glam-navy-end: #1a5643;    /* เขียวมรกตประกาย (Emerald Accent) */
-    --glam-red: #c99e32;         /* สีทองแชมเปญประกาย (Champagne Gold) */
+    --glam-navy-start: #2b0914;  /* ไวน์แดงเข้มลึก (Deep Wine) */
+    --glam-navy-end: #541226;    /* เบอร์กันดีกำมะหยี่ (Velvet Burgundy) */
+    --glam-red: #e0a96d;         /* โรสโกลด์ / แชมเปญวอร์มโทน */
     --glam-white: #ffffff; 
-    --glam-bg-muted: #f2f7f4;    /* พื้นหลังนวลอมเขียวจางๆ */
+    --glam-bg-muted: #fbf7f8;    /* ขาวเจือชมพูหม่นจางๆ */
     --text-white: #ffffff;
-    --text-navy: #09261d;        /* ข้อความหลักโทนเขียวเกือบดำ คมชัด */
-    --text-muted: #5e736a;       /* ข้อความรองอมเขียวหม่น */
-    --success: #20925c;          /* เขียวสถานะสำเร็จ */
-    --danger: #dc3545;           /* แดงแจ้งเตือน */
+    --text-navy: #2b0914;        /* ตัวอักษรสีไวน์เข้ม */
+    --text-muted: #7d656c;
+    --success: #28a745;
+    --danger: #dc3545;
     --sidebar-w: 340px;
 }
 
