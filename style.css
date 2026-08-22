@@ -1,14 +1,14 @@
 :root {
-    --glam-navy-start: #0f141c;  /* ดำประกายน้ำเงินเข้มลึก (Onyx Slate) */
-    --glam-navy-end: #1f2937;    /* ชาร์โคลลักชัวรี */
-    --glam-red: #dfb15b;         /* ทองสว่างประกาย (Rich Gold) */
+    --glam-navy-start: #ff007f;  /* ชมพูสดบาบี้ (Vibrant Magenta Pink) */
+    --glam-navy-end: #ff6584;    /* ชมพูคอรัลสว่าง */
+    --glam-red: #ffb703;         /* ส้มทองประกายแดด (Warm Gold Accent) */
     --glam-white: #ffffff; 
-    --glam-bg-muted: #f3f4f6;    
+    --glam-bg-muted: #fff5f7;    /* พื้นหลังขาวเจือชมพูพาสเทลอ่อน */
     --text-white: #ffffff;
-    --text-navy: #111827;
-    --text-muted: #6b7280;
-    --success: #10b981;
-    --danger: #ef4444;
+    --text-navy: #4a0d27;        /* ตัวอักษรสีไวน์เข้ม อ่านง่ายคมชัด */
+    --text-muted: #8b6070;
+    --success: #2ec4b6;
+    --danger: #e63946;
     --sidebar-w: 340px;
 }
 
