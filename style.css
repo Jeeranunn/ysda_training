@@ -1,14 +1,14 @@
 :root {
-    --glam-navy-start: #ff007f;  /* ชมพูสดบาบี้ (Vibrant Magenta Pink) */
-    --glam-navy-end: #ff6584;    /* ชมพูคอรัลสว่าง */
-    --glam-red: #ffb703;         /* ส้มทองประกายแดด (Warm Gold Accent) */
+    --glam-navy-start: #0077b6;  /* ฟ้าน้ำทะเลลึกสดใส */
+    --glam-navy-end: #00b4d8;    /* ฟ้าไซแอนสว่างประกายน้ำ */
+    --glam-red: #ffd166;         /* เหลืองเลมอนสดใส */
     --glam-white: #ffffff; 
-    --glam-bg-muted: #fff5f7;    /* พื้นหลังขาวเจือชมพูพาสเทลอ่อน */
+    --glam-bg-muted: #f0f9ff;    /* พื้นหลังขาวฟ้านวลตา */
     --text-white: #ffffff;
-    --text-navy: #4a0d27;        /* ตัวอักษรสีไวน์เข้ม อ่านง่ายคมชัด */
-    --text-muted: #8b6070;
-    --success: #2ec4b6;
-    --danger: #e63946;
+    --text-navy: #032b43;        /* สีตัวหนังสือฟ้าน้ำเงินเข้ม */
+    --text-muted: #537188;
+    --success: #06d6a0;
+    --danger: #ef476f;
     --sidebar-w: 340px;
 }
 
