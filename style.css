@@ -1,14 +1,14 @@
 :root {
-    --glam-navy-start: #0077b6;  /* ฟ้าน้ำทะเลลึกสดใส */
-    --glam-navy-end: #00b4d8;    /* ฟ้าไซแอนสว่างประกายน้ำ */
-    --glam-red: #ffd166;         /* เหลืองเลมอนสดใส */
+    --glam-navy-start: #ff416c;  /* ชมพูสดเกรดพรีเมียมประกายคริสตัล */
+    --glam-navy-end: #ff758c;    /* ส้มคอรัลสว่างสดใส นวลตา */
+    --glam-red: #ffd166;         /* สีทองสว่างประกาย (Sunlit Gold) */
     --glam-white: #ffffff; 
-    --glam-bg-muted: #f0f9ff;    /* พื้นหลังขาวฟ้านวลตา */
+    --glam-bg-muted: #fff8f8;    /* ขาวอมชมพูคอรัลจางมากๆ ดูสะอาดแพง */
     --text-white: #ffffff;
-    --text-navy: #032b43;        /* สีตัวหนังสือฟ้าน้ำเงินเข้ม */
-    --text-muted: #537188;
-    --success: #06d6a0;
-    --danger: #ef476f;
+    --text-navy: #4a1525;        /* สีตัวหนังสือแดงเข้มอมน้ำตาล อ่านง่าย */
+    --text-muted: #8c5d69;
+    --success: #10b981;
+    --danger: #e63946;
     --sidebar-w: 340px;
 }
 
