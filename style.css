@@ -1,14 +1,14 @@
 :root {
-    --glam-navy-start: #632cd6;  /* ม่วงสดจัดจ้าน สว่าง มีมิติ */
-    --glam-navy-end: #3b82f6;    /* น้ำเงินรอยัลสว่างประกายฟ้า */
-    --glam-red: #f43f5e;         /* ชมพูรูบี้แกลม ใช้เป็นจุดเด่น */
+    --glam-navy-start: #ee0979;  /* ชมพูราสเบอร์รี่สดใส */
+    --glam-navy-end: #ff6a00;    /* ส้มแอมเบอร์ประกายสด */
+    --glam-red: #facc15;         /* ทองวอร์มโกลด์ */
     --glam-white: #ffffff; 
-    --glam-bg-muted: #f6f5ff;    /* ขาวนวลเจือม่วงพาสเทล */
+    --glam-bg-muted: #fdf8f6;    /* ขาวเจือพีชสว่าง */
     --text-white: #ffffff;
-    --text-navy: #1e153b;        /* ตัวอักษรสีน้ำเงินเข้มลึก */
-    --text-muted: #6b6385;
-    --success: #059669;
-    --danger: #dc2626;
+    --text-navy: #3e1627;        /* น้ำตาลเข้มช็อกโกแลตผสมไวน์ */
+    --text-muted: #7c5b6b;
+    --success: #10b981;
+    --danger: #f43f5e;
     --sidebar-w: 340px;
 }
 
