@@ -4,7 +4,7 @@
 
 // 👉 [ต้องแก้] วาง URL ที่ลงท้ายด้วย /exec ระหว่างเครื่องหมาย " " ด้านล่าง
 //    ห้ามลบเครื่องหมาย " หรือ ; ออก
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyZREDuYlY5Lp1mEjQk_kbmVGJe1prfdpEtpVjmzxkf8ZMqH6RqzKXduljzXUFMZ_r8/exec";
+const ROOT_FOLDER_ID = '1x7Q2RGjFcqD6J9AQL3YQeP6AXF4xDWyS';
 
 let availableCourses = [];
 let player, maxTimeWatched = 0, actualWatchTime = 0;
