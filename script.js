@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════
    LMS FRONTEND — v7 MASTER
    ═══════════════════════════════════════════ */
-const MY_SPREADSHEET_ID = '12uENbCj03u-sUNkA9hpqCVzqupM6H9Ht5SsVGVad-2c';
-const RAW_FOLDER_INPUT = '1x7Q2RGjFcqD6J9AQL3YQeP6AXF4xDWyS';
+// 👉 [ต้องใส่] วาง Web App URL จาก Google Apps Script ที่ลงท้ายด้วย /exec ตรงนี้
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyWTAoJuk2s8F-OI-b1RHlcUpPXUMN2qMkTGRUrABynmVvezCKlAa4CvKTGAPvb8FgA/exec';
 
 let availableCourses = [];
 let player, maxTimeWatched = 0, actualWatchTime = 0;
