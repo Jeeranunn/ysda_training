@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════
    LMS FRONTEND — v7 MASTER
    ═══════════════════════════════════════════ */
-
+const MY_SPREADSHEET_ID = '12uENbCj03u-sUNkA9hpqCVzqupM6H9Ht5SsVGVad-2c';
 // 👉 [ต้องแก้] วาง URL ที่ลงท้ายด้วย /exec ระหว่างเครื่องหมาย " " ด้านล่าง
 //    ห้ามลบเครื่องหมาย " หรือ ; ออก
 const ROOT_FOLDER_ID = '1x7Q2RGjFcqD6J9AQL3YQeP6AXF4xDWyS';
