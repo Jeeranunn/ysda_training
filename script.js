@@ -2,9 +2,9 @@
    LMS FRONTEND — v7 MASTER
    ═══════════════════════════════════════════ */
 const MY_SPREADSHEET_ID = '12uENbCj03u-sUNkA9hpqCVzqupM6H9Ht5SsVGVad-2c';
-// 👉 [ต้องแก้] วาง URL ที่ลงท้ายด้วย /exec ระหว่างเครื่องหมาย " " ด้านล่าง
-//    ห้ามลบเครื่องหมาย " หรือ ; ออก
-const ROOT_FOLDER_ID = '1x7Q2RGjFcqD6J9AQL3YQeP6AXF4xDWyS';
+
+// 👉 [ต้องใส่] วาง URL ของ Web App จาก Apps Script ที่ลงท้ายด้วย /exec ตรงนี้
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwa2PB1mquF_2ZuLH7ohnSMTa-afu-3OLN0ghVTtihV6_G2K7iDYIEYI9BAF9e6ziRj/exec';
 
 let availableCourses = [];
 let player, maxTimeWatched = 0, actualWatchTime = 0;
